@@ -1,3 +1,4 @@
+import { Providers } from "./Providers";
 import Header from "./components/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -16,14 +17,16 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="./favicon.ico" />
       </head>
       <body className={inter.className}>
-        {/* header */}
-        <Header />
+        <Providers>
+          {/* header */}
+          <Header />
 
-        {/* navbar */}
+          {/* navbar */}
 
-        {/* search box */}
+          {/* search box */}
 
-        {children}
+          {children}
+        </Providers>
       </body>
     </html>
   );
