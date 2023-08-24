@@ -1,4 +1,6 @@
 
 export default function Home() {
-  return <main>Hello</main>;
+  return <main>
+    <h1 className="text-2xl text-red-500 capitalize">Home</h1>
+  </main>;
 }

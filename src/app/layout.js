@@ -1,3 +1,4 @@
+import Header from "./components/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -14,7 +15,16 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="./favicon.ico" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* header */}
+        <Header />
+
+        {/* navbar */}
+
+        {/* search box */}
+
+        {children}
+      </body>
     </html>
   );
 }
