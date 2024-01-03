@@ -1,19 +1,8 @@
 const page = () => {
   return (
-    <div className="max-w-screen-xl mx-auto">
-      <div className="mx-auto mt-8 bg-white dark:bg-gray-700">
+    <div className="max-w-screen-2xl mx-auto pt-32 px-4">
+      <div className="mx-auto mt-8">
         <h1 className="text-4xl font-bold mb-4">About Us</h1>
-        <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
-          Welcome to IMDb Clone, your go-to destination for information about
-          movies, TV shows, and celebrities. We strive to provide you with
-          accurate and up-to-date details about your favorite entertainment
-          content.
-        </p>
-        <p className="text-gray-700 dark:text-gray-200 leading-relaxed mt-4">
-          Our team of dedicated developers and movie enthusiasts is passionate
-          about delivering a seamless experience for users to explore, discover,
-          and engage with the world of entertainment.
-        </p>
 
         <p className="text-gray-700 dark:text-gray-200 leading-relaxed mt-4">
           Welcome to our movie database website! We are a team of passionate

@@ -7,13 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        // bg
+        "p-light": "#ffffff",
+        "s-light": "#f7f7f8",
+        "p-dark": "#110f1a",
+        "s-dark": "#1f1e24",
       },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [],
   darkMode: "class",
 };
