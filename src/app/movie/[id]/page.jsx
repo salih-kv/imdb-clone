@@ -72,7 +72,7 @@ export default async function MoviePage({ params }) {
           alt="Movie poster"
         ></Image>
         <div className="absolute left-0 right-0 bottom-0 h-full bg-gradient-to-t from-black/60 to-transparent"></div>
-        <div className="absolute left-16 right-0 top-2/4 flex gap-8">
+        <div className="absolute left-16 right-0 top-2/4 sm:flex gap-8 hidden">
           <a
             href={trailerUrl}
             target="_blank"
@@ -82,7 +82,7 @@ export default async function MoviePage({ params }) {
               src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
               width={200}
               height={300}
-              className="max-w-full h-full rounded-md"
+              className="max-w-full h-full rounded-md "
               placeholder="blur"
               blurDataURL="/spinner.svg"
               alt="Movie poster"
@@ -115,21 +115,19 @@ export default async function MoviePage({ params }) {
             {Number(movie.vote_average).toFixed(1)}
           </span>
         </div>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="space-x-4 mb-4">
+          {movie.genres?.map(({ id, name }) => (
+            <span
+              key={id}
+              className="bg-gray-200 dark:text-black py-1 px-2 rounded-3xl text-sm"
+            >
+              {name}
+            </span>
+          ))}
+        </div>
+        <h2 className="text-3xl mb-3 font-bold">{movie.title || movie.name}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-24">
           <div>
-            <div className="space-x-4 mb-4">
-              {movie.genres?.map(({ id, name }) => (
-                <span
-                  key={id}
-                  className="bg-gray-200 dark:text-black py-1 px-2 rounded-3xl text-sm"
-                >
-                  {name}
-                </span>
-              ))}
-            </div>
-            <h2 className="text-3xl mb-3 font-bold">
-              {movie.title || movie.name}
-            </h2>
             <p className="text-lg mb-3">
               <span className="font-semibold mr-1">Overview:</span>
               {movie.overview}

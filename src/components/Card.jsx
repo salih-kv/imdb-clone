@@ -16,20 +16,20 @@ export default function Card({ result }) {
   return (
     <Link
       href={`/movie/${result.id}`}
-      className="relative cursor-pointer transition-shadow duration-200 group"
+      className="relative cursor-pointer transition-shadow duration-200 group rounded-xl"
     >
-      <div className="w-full h-96">
+      <div className="w-full h-64 md:h-96">
         <Image
           src={imageUrl}
           width={300}
           height={500}
-          className="group-hover:opacity-80 transition-opacity duration-200 h-full object-cover max-w-full"
+          className="group-hover:opacity-80 transition-opacity duration-200 h-full object-cover w-full rounded-xl"
           placeholder="blur"
           blurDataURL="/spinner.svg"
           alt="image is not available"
         ></Image>
       </div>
-      <div className="absolute left-0 right-0 bottom-0 h-full bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div className="absolute left-0 right-0 bottom-0 h-full bg-gradient-to-t from-black/60 to-transparent rounded-xl"></div>
       <div className="absolute left-0 right-0 bottom-0 p-4 text-white invisible group-hover:visible">
         <h2 className="truncate text-lg font-bold mt-2">
           {result.title || result.name}
